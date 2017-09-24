@@ -1,0 +1,38 @@
+<div class="row" id="blogTitle">
+    <div class='col-xs-6'>
+        <h2 class="titles"><%= car.name %></h2>
+    </div>
+</div>
+<div class="row" id="carsContainer">
+    <br>
+    <div class='col-md-5'>
+        <div id="imageContainer">
+            <br>
+            <img id="carsImage" src="<%=car.image %>" height="300" width="365">
+        </div>
+        <br>
+    </div>
+    <div class='col-md-7' id="carsText">
+        <br>
+        <p>
+            <%= car.description %>
+        </p>
+    </div>
+    <div class="row" id="blogContainer">
+        <br>
+        <div class='col-md-12'>
+            <div id="buttonContainer">
+                <form id="formButton" method="GET" action="/cars/<%= car._id %>/edit">
+                    <input id="buttons" type="submit" value="Edit" class="btn btn-default">
+                </form>
+                <form id="formButton" method="POST" action="/cars/<%= car._id %>?_method=DELETE">
+                    <input id="buttons" type="submit" value="Delete" class="btn btn-default">
+                </form>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>

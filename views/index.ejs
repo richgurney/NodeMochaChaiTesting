@@ -1,0 +1,35 @@
+<% for(i=0; i< cars.length; i++){  %>
+  <div class="row" id="blogTitle">
+    <div class='col-xs-6'>
+      <h2 class="titles"><%= cars[i].name %></h2>
+    </div>
+  </div>
+  <div class="row" id="carsContainer">
+    <br>
+    <div class='col-md-5'>
+      <div id="imageContainer">
+        <br>
+        <img id="carsImage" src="<%=cars[i].image %>" height="300" width="365">
+      </div>
+      <br>
+    </div>
+    <div class='col-md-7' id="carsText">
+      <br>
+      <p><%= cars[i].description %></p>
+    </div>
+    <div class="row" id="blogContainer">
+  <br>
+  <div class='col-md-12'>
+    <div id="buttonContainer">
+      <form id="formButton" method="GET" action='/cars/<%= cars[i]._id %>' >
+        <input id="buttons" type="submit" value="Show" class="btn btn-primary btn-block">
+      </form>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+  </div>
+  <br>
+  <br>
+<% } %>
